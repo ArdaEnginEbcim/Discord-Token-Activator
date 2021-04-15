@@ -29,6 +29,9 @@ fs.readFile(
                 },
                 status: process.env.STATUS,
               });
+              if(process.env.CHANNEL) {
+              client.channels.cache.get(process.env.CHANNEL).join()
+              } else return;
             }, 10000);
             connected += 1;
           })
