@@ -20,7 +20,7 @@
     "meska"
   ],
   "dependencies": {
-    "discord.js": "^12.5.3",
+    "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
     "fs": "^0.0.1-security",
     "meska.js": "^1.0.1"
