@@ -1,4 +1,3 @@
-require("dotenv").config();
 const Discord = require("discord.js");
 const fs = require("fs");
 const Meska = require("meska.js");
@@ -21,7 +20,7 @@ fs.readFile(
         await client
           .login(token)
           .then(() => {
-            Logger.info("LOGIN", client.user.tag + " is Connected! [Activity: " + process.env.ACTIVITY + " | Status: " + process.env.STATUS + "]", true);
+            Logger.info("LOGIN", client.user.tag + " is Connected!", true);
             connected += 1;
           })
           .catch((err) => {
