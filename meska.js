@@ -22,17 +22,6 @@ fs.readFile(
           .login(token)
           .then(() => {
             Logger.info("LOGIN", client.user.tag + " is Connected! [Activity: " + process.env.ACTIVITY + " | Status: " + process.env.STATUS + "]", true);
-            setTimeout(() => {
-              client.user.setPresence({
-                activity: {
-                  name: process.env.ACTIVITY,
-                },
-                status: process.env.STATUS,
-              });
-              if(process.env.CHANNEL) {
-              client.channels.cache.get(process.env.CHANNEL).join()
-              } else return;
-            }, 10000);
             connected += 1;
           })
           .catch((err) => {
