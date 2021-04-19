@@ -12,11 +12,9 @@ npm install
 ## ⚙️ Configuration
 - Fill out the values:
 ```env
-# Name
-ACTIVITY=Meska
-
-# Status ["online", "idle", "dnd", "offline"]
-STATUS=dnd
+TOKEN1
+TOKEN2
+TOKEN3
 ```
 
 
