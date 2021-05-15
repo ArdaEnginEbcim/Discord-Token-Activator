@@ -12,7 +12,6 @@ fs.readFile(
     } else if (data == "") {
       Logger.error("FILE", "tokens.txt file is empty!", true);
     } else {
-      let msg = 1;
       let connected = 0;
       let logined = 0;
       let tokens = data.split("\n");
@@ -21,61 +20,7 @@ fs.readFile(
         await client
           .login(token)
           .then(() => {
-            client.on("message", async (message) => {
-              if (msg == 1) {
-                if (message.channel.type == "dm") {
-                  let DM = new Meska.Logger({
-                    basePath: "logs/MESSAGE/DM",
-                    name: message.author.id,
-                  });
-                  DM.info(
-                    "MESSAGE",
-                    message.author.tag +
-                      " (" +
-                      message.author.id +
-                      ")" +
-                      ":" +
-                      " " +
-                      message.content,
-                    true
-                  );
-                  return;
-                } else {
-                  let GUILD = new Meska.Logger({
-                    basePath: "logs/MESSAGE/GUILD",
-                    name: message.guild.id,
-                  });
-                  GUILD.info(
-                    "MESSAGE",
-                    message.guild.name +
-                      " (" +
-                      message.guild.id +
-                      ")" +
-                      " " +
-                      "/" +
-                      " " +
-                      message.channel.name +
-                      " (" +
-                      message.channel.id +
-                      ")" +
-                      " " +
-                      "/" +
-                      " " +
-                      message.author.tag +
-                      " (" +
-                      message.author.id +
-                      ")" +
-                      ":" +
-                      " " +
-                      message.content,
-                    true
-                  );
-                  return;
-                }
-              } else return
-            });
             Logger.info("LOGIN", client.user.tag + " is Connected!", true);
-            msg += 1;
             connected += 1;
           })
           .catch((err) => {
