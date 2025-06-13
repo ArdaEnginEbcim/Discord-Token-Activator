@@ -32,10 +32,6 @@ TOKEN3
 ## Replit
 [Remix on Replit](https://repl.it/github/ArdaEnginEbcim/Discord-Token-Activator)
 
-## 💸 Donation 
-- Papara: 1848656156
-- TR IBAN: TR82 0006 4000 0013 2040 0585 91
-
 ## 📝 Contact 
 - Discord: Meska#4024 (`324146816322895873`)
 - Mail: developer.meska@gmail.com
